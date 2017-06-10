@@ -1,0 +1,38 @@
+use_frameworks!
+
+source 'https://github.com/RedP4nda/Specs'
+source 'https://github.com/CocoaPods/Specs'
+
+target 'RPLoggerz_Example' do
+  pod 'RPLoggerz', :path => '../'
+  pod 'RPLoggerz/CrashlyticsLogger', :path => '../'
+  pod 'RPLoggerz/Dotzu', :path => '../'
+  pod 'RPLoggerz/JustLog', :path => '../'
+  pod 'RPLoggerz/SwiftyBeaver', :path => '../'
+  pod 'RPLoggerz/Watchdog', :path => '../'
+
+  pod 'Fabric', '~> 1.6.3'
+  pod 'Crashlytics', '~> 3.7.0'
+
+  target 'RPLoggerz_Tests' do
+    inherit! :search_paths
+  end
+
+end
+
+
+pre_install do |installer|
+    def installer.verify_no_static_framework_transitive_dependencies; end
+end
+
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+            target.build_configurations.each do |config|
+            if config.name == 'Release'
+                config.build_settings['OTHER_SWIFT_FLAGS'] = ''
+            else
+                config.build_settings['OTHER_SWIFT_FLAGS'] = '-DDEBUG'
+            end
+        end
+    end
+end

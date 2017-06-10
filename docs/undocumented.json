@@ -1,0 +1,19 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/fpetit/Desktop/RedPanda/Pods/RPLoggerz/RPLoggerz/Classes/Watchdog/WatchdogService.swift",
+      "line": 27,
+      "symbol": "WatchdogService",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fpetit/Desktop/RedPanda/Pods/RPLoggerz/RPLoggerz/Classes/Watchdog/WatchdogService.swift",
+      "line": 29,
+      "symbol": "WatchdogService.configure()",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/fpetit/Desktop/RedPanda/Pods/RPLoggerz"
+}

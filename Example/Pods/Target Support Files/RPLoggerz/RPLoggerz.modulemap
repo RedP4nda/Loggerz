@@ -1,0 +1,6 @@
+framework module RPLoggerz {
+  umbrella header "RPLoggerz-umbrella.h"
+
+  export *
+  module * { export * }
+}

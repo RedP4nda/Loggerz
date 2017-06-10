@@ -1,0 +1,61 @@
+PODS:
+  - CocoaAsyncSocket (7.5.1):
+    - CocoaAsyncSocket/GCD (= 7.5.1)
+  - CocoaAsyncSocket/GCD (7.5.1)
+  - Crashlytics (3.7.3):
+    - Fabric (~> 1.6.3)
+  - CrashlyticsRecorder (2.1.0)
+  - Dotzu (1.8)
+  - Fabric (1.6.11)
+  - JustLog (1.1.2):
+    - CocoaAsyncSocket (~> 7.5.0)
+    - SwiftyBeaver (~> 1.1.1)
+  - RPLoggerz (1.0):
+    - RPLoggerz/Core (= 1.0)
+  - RPLoggerz/Core (1.0)
+  - RPLoggerz/CrashlyticsLogger (1.0):
+    - CrashlyticsRecorder
+    - RPLoggerz/Core
+  - RPLoggerz/Dotzu (1.0):
+    - Dotzu
+    - RPLoggerz/Core
+  - RPLoggerz/JustLog (1.0):
+    - JustLog
+    - RPLoggerz/Core
+  - RPLoggerz/SwiftyBeaver (1.0):
+    - RPLoggerz/Core
+    - SwiftyBeaver
+  - RPLoggerz/Watchdog (1.0):
+    - RPLoggerz/Core
+    - Watchdog
+  - SwiftyBeaver (1.1.4)
+  - Watchdog (3.0)
+
+DEPENDENCIES:
+  - Crashlytics (~> 3.7.0)
+  - Fabric (~> 1.6.3)
+  - RPLoggerz (from `../`)
+  - RPLoggerz/CrashlyticsLogger (from `../`)
+  - RPLoggerz/Dotzu (from `../`)
+  - RPLoggerz/JustLog (from `../`)
+  - RPLoggerz/SwiftyBeaver (from `../`)
+  - RPLoggerz/Watchdog (from `../`)
+
+EXTERNAL SOURCES:
+  RPLoggerz:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CocoaAsyncSocket: e0a7e93b2ffa411592ff87e58524fbbc9b95b4fa
+  Crashlytics: 76f6beaff70acf226139582c09c78461597c2b98
+  CrashlyticsRecorder: c0f79b5fe91239f60fa4491de79c3d33c9d1480e
+  Dotzu: e787896f08474f4e4574baa20ec556361dfebf0c
+  Fabric: 5911403591946b8228ab1c51d98f1d7137e863c6
+  JustLog: 63de02395f33d48f78b9ce2354f79ab7ed9ec79e
+  RPLoggerz: a00ec01b464f17ee6f1b30c695f274d34ac31d0f
+  SwiftyBeaver: 9216b6e163c145628ccc7c0126df4287880d6e1e
+  Watchdog: 141185b6b3a332a9f5721ea42dfa9681cf2d7c6b
+
+PODFILE CHECKSUM: 26eeb0bb3a79747316d3a01bdd7c64f2b8f36ee7
+
+COCOAPODS: 1.2.0

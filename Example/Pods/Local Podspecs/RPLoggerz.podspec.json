@@ -1,0 +1,105 @@
+{
+  "name": "RPLoggerz",
+  "version": "1.0",
+  "summary": "Addd Logging capabilities to your app with RPLoggerz.",
+  "description": "Contains various loggers with different purposes: Dotzu, SwiftyBeaver, JustLog, CrashlyticsLogger, WatchDog.",
+  "homepage": "https://github.com/RedP4nda/RPLoggerz",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "MrCloud": "florianp37@me.com"
+  },
+  "source": {
+    "git": "https://gitlab.com/mrcloud/RPLoggerz.git",
+    "tag": "1.0"
+  },
+  "social_media_url": "https://twitter.com/Florian_MrCloud",
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "RPLoggerz/Classes/Core/**/*",
+  "default_subspecs": "Core",
+  "subspecs": [
+    {
+      "name": "Core",
+      "source_files": "RPLoggerz/Classes/Core/**/*"
+    },
+    {
+      "name": "CrashlyticsLogger",
+      "source_files": "RPLoggerz/Classes/CrashlyticsLogger/**/*",
+      "dependencies": {
+        "RPLoggerz/Core": [
+
+        ],
+        "CrashlyticsRecorder": [
+
+        ]
+      },
+      "xcconfig": {
+        "OTHER_SWIFT_FLAGS": "$(inherited) -DRPLoggerzCrashlyticsLogger"
+      }
+    },
+    {
+      "name": "Watchdog",
+      "source_files": "RPLoggerz/Classes/Watchdog/**/*",
+      "dependencies": {
+        "RPLoggerz/Core": [
+
+        ],
+        "Watchdog": [
+
+        ]
+      },
+      "xcconfig": {
+        "OTHER_SWIFT_FLAGS": "$(inherited) -DRPLoggerzWatchdog"
+      }
+    },
+    {
+      "name": "Dotzu",
+      "source_files": "RPLoggerz/Classes/Dotzu/**/*",
+      "dependencies": {
+        "RPLoggerz/Core": [
+
+        ],
+        "Dotzu": [
+
+        ]
+      },
+      "xcconfig": {
+        "OTHER_SWIFT_FLAGS": "$(inherited) -DRPLoggerzDotzu"
+      }
+    },
+    {
+      "name": "SwiftyBeaver",
+      "source_files": "RPLoggerz/Classes/SwiftyBeaver/**/*",
+      "dependencies": {
+        "RPLoggerz/Core": [
+
+        ],
+        "SwiftyBeaver": [
+
+        ]
+      },
+      "xcconfig": {
+        "OTHER_SWIFT_FLAGS": "$(inherited) -DRPLoggerzSwiftyBeaver"
+      }
+    },
+    {
+      "name": "JustLog",
+      "source_files": "RPLoggerz/Classes/JustLog/**/*",
+      "dependencies": {
+        "RPLoggerz/Core": [
+
+        ],
+        "JustLog": [
+
+        ]
+      },
+      "xcconfig": {
+        "OTHER_SWIFT_FLAGS": "$(inherited) -DRPLoggerzJustLog"
+      }
+    }
+  ]
+}

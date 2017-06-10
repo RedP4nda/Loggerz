@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RPLoggerz  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="RPLoggerz  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">RPLoggerz Docs</a> (91% documented)</p>
+        <p class="header-right"><a href="https://github.com/RedP4nda/RPLoggerz"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">RPLoggerz Reference</a>
+        <img id="carat" src="img/carat.png" />
+        RPLoggerz  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/CrashlyticsLoggerManager.html">CrashlyticsLoggerManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/DotzuLoggerService.html">DotzuLoggerService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/JustLogService.html">JustLogService</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RPLoggerz.html">RPLoggerz</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/WatchdogService.html">WatchdogService</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/LogLevel.html">LogLevel</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:F9RPLoggerz4pLogFTP_8logLevelOS_8LogLevel5errorGSqPs5Error___T_">pLog(_:logLevel:error:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/MessageLogger.html">MessageLogger</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='rploggerz' class='heading'>RPLoggerz</h1>
+
+<p><a href="https://travis-ci.org/RedP4nda/RPLoggerz"><img src="https://travis-ci.org/RedP4nda/RPLoggerz.svg?branch=master" alt="Build Status"></a>
+<a href="http://twitter.com/Florian_MrCloud"><img src="https://img.shields.io/badge/twitter-@Florian_MrCloud-blue.svg?style=flat" alt="Twitter"></a></p>
+<h1 id='disclaimer' class='heading'>Disclaimer:</h1>
+
+<ul>
+<li>This program is still under active development and in its early stage, consider that breaking changes and rewrites could occur before using it in a stable version.</li>
+</ul>
+
+<p>RPLoggerz is a library with various logging utilities.</p>
+
+<ul>
+<li><a href="#features">Features</a></li>
+<li><a href="#the-basics">The Basics</a></li>
+<li><a href="#to-do">To Do</a></li>
+<li><a href="#contributing">Contributing</a></li>
+<li><a href="#installation">Installation</a></li>
+</ul>
+<h1 id='features' class='heading'>Features:</h1>
+
+<ul>
+<li>CrashlyticsLogger powered by(<a href="https://github.com/AnthonyMDev/CrashlyticsRecorder">CrashlyticsRecorder</a>)</li>
+<li><a href="https://github.com/wojteklu/Watchdog">Watchdog</a></li>
+<li><a href="https://github.com/remirobert/Dotzu">Dotzu</a></li>
+<li><a href="https://github.com/SwiftyBeaver/SwiftyBeaver">SwiftyBeaver</a></li>
+<li><a href="https://github.com/justeat/JustLog">JustLog</a></li>
+</ul>
+<h1 id='the-basics' class='heading'>The Basics</h1>
+
+<p>RPLoggerz helps you use various logging features to your project, by adding the different subspecs provided, thus this project is highly dependent on CocoaPods.</p>
+<h1 id='crashlyticslogger' class='heading'>CrashlyticsLogger</h1>
+
+<p>Install by adding the following lines in your Podfile:</p>
+<pre class="highlight ruby"><code><span class="n">source</span> <span class="s1">'https://github.com/RedP4nda/RPLoggerz'</span>
+
+<span class="n">pod</span> <span class="s1">'RPLoggerz/CrashlyticsLogger'</span><span class="p">,</span> <span class="s1">'~&gt; 1.0'</span>
+</code></pre>
+
+<p>Usage:</p>
+<pre class="highlight swift"><code><span class="c1">// AppDelegate.swift</span>
+<span class="kd">func</span> <span class="nf">application</span><span class="p">(</span><span class="n">_</span> <span class="nv">application</span><span class="p">:</span> <span class="kt">UIApplication</span><span class="p">,</span> <span class="n">didFinishLaunchingWithOptions</span> <span class="nv">launchOptions</span><span class="p">:</span> <span class="p">[</span><span class="kt">UIApplicationLaunchOptionsKey</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="p">{</span>
+    <span class="kt">Fabric</span><span class="o">.</span><span class="nf">with</span><span class="p">([</span><span class="kt">Crashlytics</span><span class="o">.</span><span class="k">self</span><span class="p">])</span>
+    <span class="kt">CrashlyticsLoggerManager</span><span class="o">.</span><span class="nf">configure</span><span class="p">()</span>
+    <span class="kt">CrashlyticsLoggerManager</span><span class="o">.</span><span class="nf">setupCrashlyticsRecorder</span><span class="p">(</span><span class="nv">crashlytics</span><span class="p">:</span> <span class="kt">Crashlytics</span><span class="o">.</span><span class="nf">sharedInstance</span><span class="p">())</span>
+
+    <span class="k">return</span> <span class="kc">true</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Then you can add this anywhere:</p>
+<pre class="highlight swift"><code><span class="kt">CrashlyticsLoggerManager</span><span class="o">.</span><span class="nf">logMessage</span><span class="p">(</span><span class="s">"message"</span><span class="p">,</span> <span class="nv">logLevel</span><span class="p">:</span> <span class="o">.</span><span class="n">verbose</span><span class="p">)</span>
+</code></pre>
+
+<p>Which will result into adding the message to the crash logs gathered by the crashlytics platform:</p>
+
+<p><img src="./docs/images/crashlog.png" width="1000" height="568" /></p>
+<h1 id='watchdog' class='heading'>Watchdog</h1>
+
+<p><code>Logging excessive blocking on the main thread</code></p>
+
+<p>Install by adding the following lines in your Podfile:</p>
+<pre class="highlight ruby"><code><span class="n">source</span> <span class="s1">'https://github.com/RedP4nda/Specs'</span>
+
+<span class="n">pod</span> <span class="s1">'RPLoggerz/Watchdog'</span><span class="p">,</span> <span class="s1">'~&gt; 1.0'</span>
+</code></pre>
+
+<p>Usage:</p>
+<pre class="highlight swift"><code><span class="kt">WatchdogManager</span><span class="o">.</span><span class="nf">configure</span><span class="p">()</span>
+</code></pre>
+<h1 id='dotzu' class='heading'>Dotzu</h1>
+
+<p><code>In-App iOS Debugging Tool With Enhanced Logging, Networking Info, Crash reporting And More.</code></p>
+
+<p>Install by adding the following lines in your Podfile:</p>
+<pre class="highlight ruby"><code><span class="n">source</span> <span class="s1">'https://github.com/RedP4nda/Specs'</span>
+
+<span class="n">pod</span> <span class="s1">'RPLoggerz/Dotzu'</span><span class="p">,</span> <span class="s1">'~&gt; 1.0'</span>
+</code></pre>
+
+<p>Usage:</p>
+<pre class="highlight swift"><code><span class="kt">DotzuLoggerManager</span><span class="o">.</span><span class="nf">configure</span><span class="p">()</span>
+
+<span class="o">...</span>
+<span class="kt">DotzuLoggerManager</span><span class="o">.</span><span class="nf">logMessage</span><span class="p">(</span><span class="s">"message"</span><span class="p">,</span> <span class="nv">logLevel</span><span class="p">:</span> <span class="o">.</span><span class="n">verbose</span><span class="p">)</span>
+</code></pre>
+<h1 id='swiftybeaver' class='heading'>SwiftyBeaver</h1>
+
+<p><code>Convenient logging during development &amp; release in Swift 2 &amp; 3</code></p>
+
+<p>Install by adding the following lines in your Podfile:</p>
+<pre class="highlight ruby"><code><span class="n">source</span> <span class="s1">'https://github.com/RedP4nda/Specs'</span>
+
+<span class="n">pod</span> <span class="s1">'RPLoggerz/SwiftyBeaver'</span><span class="p">,</span> <span class="s1">'~&gt; 1.0'</span>
+</code></pre>
+
+<p>Usage:</p>
+<pre class="highlight swift"><code></code></pre>
+<h1 id='justlog' class='heading'>JustLog</h1>
+
+<p><code>JustLog brings logging on iOS to the next level. It supports console, file and remote Logstash logging via TCP socket with no effort. Support for logz.io available.</code></p>
+
+<p>Install by adding the following lines in your Podfile:</p>
+<pre class="highlight ruby"><code><span class="n">source</span> <span class="s1">'https://github.com/RedP4nda/Specs'</span>
+
+<span class="n">pod</span> <span class="s1">'RPLoggerz/JustLog'</span><span class="p">,</span> <span class="s1">'~&gt; 1.0'</span>
+</code></pre>
+
+<p>Usage:</p>
+<pre class="highlight swift"><code><span class="kt">JustLogManager</span><span class="o">.</span><span class="nf">configure</span><span class="p">()</span>
+
+<span class="o">...</span>
+<span class="kt">JustLogManager</span><span class="o">.</span><span class="nf">logMessage</span><span class="p">(</span><span class="s">"message"</span><span class="p">,</span> <span class="nv">logLevel</span><span class="p">:</span> <span class="o">.</span><span class="n">verbose</span><span class="p">)</span>
+
+<span class="k">let</span> <span class="nv">error</span> <span class="o">=</span> <span class="kt">MessageError</span><span class="o">.</span><span class="kt">SimpleError</span><span class="p">(</span><span class="s">"Error Occured"</span><span class="p">)</span>
+<span class="kt">JustLogManager</span><span class="o">.</span><span class="nf">logMessage</span><span class="p">(</span><span class="s">"message"</span><span class="p">,</span> <span class="nv">logLevel</span><span class="p">:</span> <span class="o">.</span><span class="n">error</span><span class="p">,</span> <span class="nv">error</span><span class="p">:</span> <span class="n">error</span><span class="p">)</span>
+</code></pre>
+<h1 id='to-do' class='heading'>To Do</h1>
+
+<ul>
+<li>Enable/configure Alamofire/URLSession capabilities to DotzuLoggerManager</li>
+</ul>
+<h1 id='installation' class='heading'>Installation</h1>
+<h3 id='cocoapods' class='heading'>Cocoapods</h3>
+
+<p>RPLoggerzImageLoader can be added to your project using <a href="http://cocoapods.org">CocoaPods</a> by adding the following lines to your <code>Podfile</code>:</p>
+<pre class="highlight ruby"><code><span class="n">source</span> <span class="s1">'https://github.com/RedP4nda/Specs'</span>
+
+<span class="n">pod</span> <span class="s1">'RPLoggerz/CrashlyticsLogger'</span><span class="p">,</span> <span class="s1">'~&gt; 1.0'</span>
+<span class="n">pod</span> <span class="s1">'RPLoggerz/Watchdog'</span><span class="p">,</span> <span class="s1">'~&gt; 1.0'</span>
+<span class="n">pod</span> <span class="s1">'RPLoggerz/Dotzu'</span><span class="p">,</span> <span class="s1">'~&gt; 1.0'</span>
+<span class="n">pod</span> <span class="s1">'RPLoggerz/SwiftyBeaver'</span><span class="p">,</span> <span class="s1">'~&gt; 1.0'</span>
+<span class="n">pod</span> <span class="s1">'RPLoggerz/JustLog'</span><span class="p">,</span> <span class="s1">'~&gt; 1.0'</span>
+</code></pre>
+<h2 id='contributors' class='heading'>Contributors</h2>
+
+<p><a href="https://github.com/MrCloud"><img src="https://avatars2.githubusercontent.com/u/486140?s=100" alt="MrCloud"></a></p>
+<h1 id='contributing' class='heading'>Contributing</h1>
+
+<p>Contributions are very welcome 👍😃.</p>
+
+<p>Before submitting any pull request, please ensure you have run the included tests (if any) and they have passed. If you are including new functionality, please write test cases for it as well.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2017 <a class="link" href="https://github.com/MrCloud" target="_blank" rel="external">MrCloud</a>. All rights reserved. (Last updated: 2017-06-13)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
