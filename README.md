@@ -153,6 +153,9 @@ pod 'RPLoggerz/JustLog', '~> 1.0'
 ## Contributors
 [![MrCloud](https://avatars2.githubusercontent.com/u/486140?s=100)](https://github.com/MrCloud)
 
+## Partner
+<img src="https://github.com/MobileTribe/pandroid/raw/master/pandroid-doc/assets/partner/lm.jpg" width="100" height="100" />
+
 # Contributing
 
 Contributions are very welcome 👍😃.
