@@ -26,6 +26,7 @@ import UIKit
 import RPLoggerz
 import Fabric
 import Crashlytics
+import SwiftyBeaver
 
 
 @UIApplicationMain
@@ -41,7 +42,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         CrashlyticsLoggerManager.setupCrashlyticsRecorder(crashlytics: Crashlytics.sharedInstance())
 
 
-        _ = RPLoggerz([DotzuLoggerService(), JustLogService(), CrashlyticsLoggerManager.sharedManager])
+        let swiftyBeaverLoggerService = SwiftyBeaverLoggerService()
+        let consoleDestination = ConsoleDestination()
+        swiftyBeaverLoggerService.configure(destinations: [consoleDestination])
+        
+        RPLoggerz([DotzuLoggerService(), JustLogService(), CrashlyticsLoggerManager.sharedManager, swiftyBeaverLoggerService])
 
         WatchdogService.configure()
         return true

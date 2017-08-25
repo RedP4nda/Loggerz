@@ -1,0 +1,7 @@
+min_acl: public
+clean: true
+author: MrCloud
+author_url: https://github.com/MrCloud
+github_url: https://github.com/RedP4nda/RPLoggerz
+module: RPLoggerz
+xcodebuild_arguments: [-project,Example/Pods/Pods.xcodeproj,-sdk,iphonesimulator,-target,RPLoggerz]

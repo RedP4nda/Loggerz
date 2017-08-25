@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>MessageLogger Protocol Reference</title>
+    <title>SwiftyBeaverLoggerService Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Protocol/MessageLogger" class="dashAnchor"></a>
-    <a title="MessageLogger Protocol Reference"></a>
+    <a name="//apple_ref/swift/Class/SwiftyBeaverLoggerService" class="dashAnchor"></a>
+    <a title="SwiftyBeaverLoggerService Class Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">RPLoggerz Docs</a> (85% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">RPLoggerz Reference</a>
         <img id="carat" src="../img/carat.png" />
-        MessageLogger Protocol Reference
+        SwiftyBeaverLoggerService Class Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -80,19 +80,59 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>MessageLogger</h1>
-              <div class="declaration">
-                <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">MessageLogger</span></code></pre>
-
-                </div>
-              </div>
-            <p>The MessageLogger public interface</p>
+            <h1>SwiftyBeaverLoggerService</h1>
+            <p>Undocumented</p>
 
           </section>
           <section class="section task-group-section">
             <div class="task-group">
               <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9RPLoggerz25SwiftyBeaverLoggerServicecFT_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9RPLoggerz25SwiftyBeaverLoggerServicecFT_S0_">init()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9RPLoggerz25SwiftyBeaverLoggerService9configureFT12destinationsGSaC12SwiftyBeaver15BaseDestination__T_"></a>
+                    <a name="//apple_ref/swift/Method/configure(destinations:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9RPLoggerz25SwiftyBeaverLoggerService9configureFT12destinationsGSaC12SwiftyBeaver15BaseDestination__T_">configure(destinations:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Configure SwiftyBeaver Service</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span><span class="nv">destinations</span><span class="p">:</span> <span class="p">[</span><span class="kt">BaseDestination</span><span class="p">])</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -106,14 +146,13 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Logs a message from given items.</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">logMessage</span><span class="p">(</span><span class="n">_</span> <span class="nv">items</span><span class="p">:</span> <span class="kt">Any</span><span class="o">...</span><span class="p">,</span> <span class="nv">logLevel</span><span class="p">:</span> <span class="kt"><a href="../Enums/LogLevel.html">LogLevel</a></span><span class="p">,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?,</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">function</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">logMessage</span><span class="p">(</span><span class="n">_</span> <span class="nv">items</span><span class="p">:</span> <span class="kt">Any</span><span class="o">...</span><span class="p">,</span> <span class="nv">logLevel</span><span class="p">:</span> <span class="kt"><a href="../Enums/LogLevel.html">LogLevel</a></span><span class="p">,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?,</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">function</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">line</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -129,7 +168,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>items/objects to be logged</p>
+                                  
                                 </div>
                               </td>
                             </tr>
@@ -141,7 +180,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>the log level from any of these values (verbose, info, warning, error)</p>
+                                  
                                 </div>
                               </td>
                             </tr>
@@ -153,7 +192,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>the error to be logged</p>
+                                  
                                 </div>
                               </td>
                             </tr>

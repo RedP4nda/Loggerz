@@ -1,6 +1,20 @@
 {
   "warnings": [
     {
+      "file": "/Users/fpetit/Desktop/RedPanda/Pods/RPLoggerz/RPLoggerz/Classes/SwiftyBeaver/SwiftyBeaverLoggerService.swift",
+      "line": 27,
+      "symbol": "SwiftyBeaverLoggerService",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/fpetit/Desktop/RedPanda/Pods/RPLoggerz/RPLoggerz/Classes/SwiftyBeaver/SwiftyBeaverLoggerService.swift",
+      "line": 31,
+      "symbol": "SwiftyBeaverLoggerService.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/fpetit/Desktop/RedPanda/Pods/RPLoggerz/RPLoggerz/Classes/Watchdog/WatchdogService.swift",
       "line": 27,
       "symbol": "WatchdogService",

@@ -1,5 +1,5 @@
 //
-//  RPLoggerz.swift
+//  SwiftyBeaverLoggerService.swift
 //
 // Copyright (c) 2017 Florian PETIT <florianp37@me.com>
 //
@@ -20,35 +20,39 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
-// 
+//
 
-/**
- Logs a message from given items.
- - parameter items: items/objects to be logged
- - parameter logLevel: the log level from any of these values (verbose, info, warning, error)
- - parameter error: the error to be logged
- */
-public func pLog(_ items : Any, logLevel: LogLevel = .info, error: Error?) {
-    for logger in RPLoggerz.loggers {
-        logger.logMessage(items, logLevel: logLevel, error: error, file: "", function: "", line: 0)
+import SwiftyBeaver
+
+public class SwiftyBeaverLoggerService: MessageLogger {
+    
+    let logger = SwiftyBeaver.self
+    
+    public required init() {
     }
-}
-
-
-/**
- RPLoggerz is a log dispatcher class designed to handle loggers that implement MessageLogger interface
- */
-open class RPLoggerz {
-
-    /// The loggers to dispatch the log messages to
-    fileprivate static var loggers: [MessageLogger] = []
-
+    
     /**
-     Sets up RPLoggerz.
-     - parameter loggers: the loggers to that will get messages dispatched to
+     Configure SwiftyBeaver Service
      */
-    @discardableResult public required init(_ loggers: [MessageLogger]) {
-        RPLoggerz.loggers = loggers
+    public func configure(destinations: [BaseDestination]) {
+        for destination in destinations {
+            logger.addDestination(destination)
+        }
     }
-
+    
+    
+    
+    public func logMessage(_ items: Any..., logLevel: LogLevel, error: Error?, file: String, function: String, line: Int) {
+        switch logLevel {
+        case .verbose:
+            logger.verbose(items.description)
+        case .info:
+            logger.info(items.description)
+        case .warning:
+            logger.warning(items.description)
+        case .error:
+            logger.error(items.description)
+        }
+    }
 }
+

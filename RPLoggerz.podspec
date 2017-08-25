@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'RPLoggerz'
-  s.version          = '0.9'
+  s.version          = '0.9.1'
   s.summary          = 'Addd Logging capabilities to your app with RPLoggerz.'
 
   s.description      = <<-DESC
